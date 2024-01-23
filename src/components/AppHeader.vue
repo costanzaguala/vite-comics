@@ -25,14 +25,14 @@ export default {
 
 <template> 
 
-    <section class="section-large">
+    <header class="header-top">
         
-    </section>
+    </header>
 
-	<section class="section-medium display-flex">
+	<header class="header-bottom display-flex">
         
 		<div id="logo">
-			<img src="../assets/img/dc-logo.png" alt="">
+			<img src="../assets/img/dc-logo.png" alt="logo-dc">
 		</div>
 
 		<nav>
@@ -43,50 +43,28 @@ export default {
 			</ul>
 		</nav>
 
-    </section>
+    </header>
 
-    <section class="section-large">
-
-        <div class="section-medium">
-            <h2>
-        --> Content goes here <--
-            </h2>
-        </div>
-        
-    </section>
-
-    <section class="section-large">
-
-<div class="section-medium">
-    <h2>
---> Content goes here <--
-    </h2>
-</div>
-
-</section>
-
-
-        
 </template>
 
 <style lang="scss" scoped>
 
-.section-large {
-    background-color: black;
+.header-top {
     padding: 50px 0;
-    color: white;
+    background-color: var(--black);
 }
 
-.section-medium {
-	width:1200px;
-	margin:0 auto;
+.header-bottom {
+    background-color: var(--white);
+	width: 1200px;
+	margin: 0 auto;
 	justify-content: space-between;
     padding: 20px 0;
 
 }
 .display-flex {
     flex-wrap: wrap;
-	display:flex;
+	display: flex;
     align-items: center;
 }
 
@@ -95,7 +73,7 @@ ul {
 }
 
 li {
-	margin:auto 10px;
+	margin: auto 10px;
 }
 .h2 {
     font-weight: bold;
