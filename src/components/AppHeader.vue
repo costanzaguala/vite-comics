@@ -25,9 +25,9 @@ export default {
 
 <template> 
 
-    <header class="header-top">
+    <section class="header-top">
         
-    </header>
+    </section>
 
 	<header class="header-bottom display-flex">
         
@@ -35,12 +35,14 @@ export default {
 			<img src="../assets/img/dc-logo.png" alt="logo-dc">
 		</div>
 
-		<nav>
-			<ul class="display-flex">
-				<li v-for="(elem,i) in navigationBar">
-					{{ elem }}
-				</li>
-			</ul>
+        <nav>
+            <ul class="display-flex">
+                <li v-for="(elem,i) in navigationBar" :key="i">
+                    <a href="">
+                        {{ elem }}
+                    </a>
+                </li>
+            </ul>
 		</nav>
 
     </header>
@@ -48,6 +50,18 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+
+@use"../assets/scss/main.scss" as *;
+
+
+nav {
+    width: 60%;
+    font-size: 12px;
+    a {
+        padding: 0px;
+        font-weight: 600;
+    }
+}
 
 .header-top {
     padding: 50px 0;
@@ -61,22 +75,6 @@ export default {
 	justify-content: space-between;
     padding: 20px 0;
 
-}
-.display-flex {
-    flex-wrap: wrap;
-	display: flex;
-    align-items: center;
-}
-
-ul {
-	list-style: none;
-}
-
-li {
-	margin: auto 10px;
-}
-.h2 {
-    font-weight: bold;
 }
 
 </style>

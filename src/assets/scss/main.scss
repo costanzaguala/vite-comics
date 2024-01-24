@@ -2,7 +2,37 @@
 @use "partials/mixins.scss" as *;
 
 
-h1 {
-    text-align: center;
-    color: lightcoral;
+.display-flex {
+    flex-wrap: wrap;
+	display: flex;
+    align-items: center;
 }
+
+.justify-content-space-between {
+    justify-content: space-between;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.container {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+ul, a {
+	list-style: none;
+    color: var(--black);
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+li {
+	margin: auto 10px;
+}
+
+.white-text {
+    color: var(--white)
+}
+
