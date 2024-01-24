@@ -71,8 +71,10 @@ export default {
                             </h4>
 
 							<ul>
-								<li v-for="(elem) in comicsList" :key="i">
-									{{ elem }}
+								<li v-for="(elem,i) in comicsList" :key="i">
+                                    <a href="">
+                                        {{ elem }}
+                                    </a>
 								</li>
 							</ul>
 
@@ -81,8 +83,10 @@ export default {
                             </h4>
 
 							<ul>
-								<li v-for="(elem) in shopList" :key="i">
-									{{ elem }}
+								<li v-for="(elem,i) in shopList" :key="i">
+                                    <a href="">
+                                        {{ elem }}
+                                    </a>
 								</li>
 							</ul>
 						</div>
@@ -94,9 +98,11 @@ export default {
 						</h4>
 
 						<ul>
-							<li v-for="(elem) in dcList" :key="i">
-								{{elem}}
-							</li>
+							<li v-for="(elem,i) in dcList" :key="i">
+                                <a href="">
+                                        {{ elem }}
+                                </a>
+                            </li>
 						</ul>
 					</div>
 
@@ -107,8 +113,10 @@ export default {
 
 						<ul>
                             <li v-for="(elem,i) in siteList" :key="i">
-								{{ elem }}
-							</li>
+                                <a href="">
+                                        {{ elem }}
+                                </a>
+                            </li>
 						</ul>
 					</div>
                 </div>
@@ -130,7 +138,7 @@ export default {
 							FOLLOW US
 						</div>
 						<div class="container-social">
-							<img v-for="(elem) in socialIcons" :src="getImagePath('../assets/img/'+ elem)" alt="">
+							<img v-for="(elem) in socialIcons" :src="getImagePath('../assets/img/'+ elem)" :alt="elem" :key="i">
 						</div>
 					</div>
 				</div>
@@ -170,8 +178,17 @@ ul {
 
 li {
     margin: 5px 0;
-    color: var(--light-grey);
     font-size: 14px;
+}
+
+a {
+    color: var(--light-grey);
+    padding: 0;
+}
+
+a:hover {
+        color: var(--blue);
+  
 }
 
 #left-side {
@@ -210,6 +227,11 @@ button {
     font-size: 16px;
     border: 2px solid var(--blue);
     background-color: transparent;
+}
+
+button:hover {
+        color: var(--blue);
+  
 }
 
 .social {

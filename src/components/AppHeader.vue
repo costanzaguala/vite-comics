@@ -25,10 +25,6 @@ export default {
 
 <template> 
 
-    <section class="header-top">
-        
-    </section>
-
 	<header class="header-bottom display-flex">
         
 		<div id="logo">
@@ -66,6 +62,11 @@ nav {
 .header-top {
     padding: 50px 0;
     background-color: var(--black);
+}
+
+a:hover {
+  color: var(--blue);
+  
 }
 
 .header-bottom {
